@@ -18,6 +18,7 @@ for i=1:length(alpha)
     % AA' = Required Covariance Matrix(Sigma_x)
     rng(44);
     for j=1:length(m)
+        % Performing the MAP estimation for 'loop' number of times
         for k=1:loops
             x = A*randn(n,1);   
             phi = sqrt(1/m(j))*randn(m(j), n);
